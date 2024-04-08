@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="slider.css">
+    <title>Stop Watch</title>
+</head>
+<body>
+    <div id="stopwatch">
+        <div id="time">
+            <h1>00:00:00</h1>
+        </div>
+        <input type="button" value="Start" onclick="start()">
+        <input type="button" value="stop" onclick="stop()">
+        <input type="button" value="Reset" onclick="reset()">
+    </div>
+
+<!-- JAVA Script starts from here -->
+
+    <script>
+        let seconds=0;
+        let minutes=0;
+        let hours=0;
+        let display=document.getElementById("time");
+        let timer;
+
+        function stopwatch(){
+            seconds++;
+            if(seconds>=60) {
+            seconds=0;
+            minutes++;
+        }
+            if(minutes>=60) {
+            minutes=0;
+            hours++;
+            }
+            display.textContent=pad(hours)+":"+pad(minutes)+":"+pad(seconds);
+        }
+        
+        function start(){
+            timer=setInterval(stopwatch,1000);
+        }
+
+        function pad(number){
+            return(number<10)?'0'+number:number;
+        }
+        function stop(){
+            clearInterval(timer);
+        }
+        function reset(){
+            clearInterval(timer);
+            seconds=0;
+            hours=0;
+            minutes=0;
+            display.textContent=pad(hours)+":"+pad(minutes)+":"+pad(seconds);
+        }
+    </script> 
+</body>
+</html>

@@ -1,0 +1,36 @@
+
+body {
+            padding: 0%;
+            margin: 0%;
+            background: url(9e7beaf6b8030ef0991de464edca0133.jpg) no-repeat;
+            background-size: cover;
+        }
+
+        #stopwatch {
+            text-align: center;
+            margin-top: 50px;
+            color: red;
+            padding-top: 17%;
+        }
+
+        #time {
+            font-size: 5em;
+            border: 4px solid red;
+            width: 400px;
+            margin: auto;
+            box-shadow: 2px 6px 20px red;
+            font-family: sans-serif;
+        }
+
+        input {
+            margin-top: -20px;
+            padding: 10px 20px;
+            font-size: 18px;
+          cursor: pointer;
+            color: white;
+            background-color: black;
+            border: 2px solid red;
+            font-weight: 600;
+            margin: 5px;
+            
+}
